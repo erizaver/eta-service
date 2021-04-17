@@ -1,0 +1,27 @@
+syntax = "proto3";
+package eta_service;
+
+option go_package = "/api";
+import "google/api/annotations.proto";
+
+service EtaService {
+  rpc GetNearestCarEtaV1(GetNearestCarEtaV1Request) returns (GetNearestCarEtaV1Response) {
+    option (google.api.http) = {
+      get: "/v1/get-nearest-car-eta/lat/{latitude}/lng/{longitude}"
+    };
+  }
+}
+
+message GetNearestCarEtaV1Request {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message GetNearestCarEtaV1Response {
+  Data data = 1;
+
+  message Data {
+    int64 car_id = 1;
+    int64 eta = 2;
+  }
+}

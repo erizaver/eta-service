@@ -1,0 +1,6 @@
+GET http://localhost:8080/v1/get-nearest-car-eta/lat/55.777930/lng/37.556981
+Accept: application/json
+
+### 70 meters away
+GET http://localhost:8080/v1/get-nearest-car-eta/lat/55.777850/lng/37.555860
+Accept: application/json

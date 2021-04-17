@@ -1,0 +1,23 @@
+env:
+  - name: HTTP_PORT
+    value: ":8080"
+  - name: WHEELY_FAKE_SERVICE_HOST
+    value: "dev-api.wheely.com"
+  - name: WHEELY_FAKE_ETA_BASE_PATH
+    value: "fake-eta"
+  - name: HTTP_TIMEOUT_SECONDS
+    value: "5s"
+  - name: HTTP_RETRY_ATTEMPTS
+    value: 3
+  - name: REDIS_HOST
+    value: "redis"
+  - name: REDIS_PORT
+    value: ":6379"
+  - name: REDIS_CACHE_INVALIDATION_TIME_SECONDS
+    value: "30s"
+  - name: REDIS_CACHE_SEARCH_RADIUS_METERS
+    value: 100
+  - name: WHEELY_FAKE_CAR_SERVICE_CAR_LIMIT_PER_REQUEST
+    value: 5
+
+
